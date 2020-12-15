@@ -37,7 +37,6 @@ namespace apicSharp.Services
         {
             Todo todoAchado = todoList.Find(todo => todo.id == id);
             todoAchado.AlterarStatus();
-            todoList.Insert(todoList.IndexOf(todoList.Find(todo => todo.id == id)), todoAchado);
             return todoAchado == null ? "Todo não achado" : "Todo alterado com suceso";
         }
     }
